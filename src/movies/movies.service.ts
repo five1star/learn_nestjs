@@ -14,7 +14,7 @@ export class MoviesService {
   getOne(id: number): Movie {
     const movie = this.movies.find((movie) => movie.id === id); // parseInt(id)를 +id로 대체 가능
     if (!movie) {
-      throw new NotFoundException(`Movie with id:${id} not found. `);
+      throw new NotFoundException(`Movie with id:${id} not found.`);
       //nest js가 제공하는 예외처리
     }
     return movie;
