@@ -20,8 +20,9 @@ export class MoviesController {
   constructor(private readonly moviesService: MoviesService) {}
 
   @Get()
-  getAll(@Req() req, @Res() res): Movie[] {
+  getAll(): Movie[] {
     // express앱에 접근 가능하다.그러나 좋은 방법은 아니다. NestJS는 두 개의 프레임워크에서 작동한다. Fastify에서도 작동할수있다.
+    //@Req() req, @Res() res
     return this.moviesService.getAll();
   }
 
